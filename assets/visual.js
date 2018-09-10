@@ -68,10 +68,6 @@ function visualInit()
 function canvasInit() {
 	var canvas = document.getElementById('player-vis' + ((fullscreenRunning) ? '-fs' : ''));
 
-	console.log (fullscreenRunning);
-
-	console.log('player-vis' + ((fullscreenRunning) ? '-fs' : ''), canvas);
-
 	canvas.width =  (fullscreenRunning) ? FS_WIDTH : WIDTH;
 	canvas.height = (fullscreenRunning) ? FS_HEIGHT : HEIGHT;
 	canvasCtx = canvas.getContext('2d');
