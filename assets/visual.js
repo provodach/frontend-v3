@@ -18,23 +18,27 @@ var
 
 
 function launchFullScreen(element) {
-  if(element.requestFullScreen) {
-    element.requestFullScreen();
-  } else if(element.mozRequestFullScreen) {
-    element.mozRequestFullScreen();
-  } else if(element.webkitRequestFullScreen) {
-    element.webkitRequestFullScreen();
-  } else console.warn('No fullscreen support!');
+
+	if (!settings.visualsActive)
+		return; 
+
+	if(element.requestFullScreen) {
+		element.requestFullScreen();
+	} else if(element.mozRequestFullScreen) {
+		element.mozRequestFullScreen();
+	} else if(element.webkitRequestFullScreen) {
+		element.webkitRequestFullScreen();
+	} else console.warn('No fullscreen support!');
 }
 
 function cancelFullscreen() {
-  if(document.cancelFullScreen) {
-    document.cancelFullScreen();
-  } else if(document.mozCancelFullScreen) {
-    document.mozCancelFullScreen();
-  } else if(document.webkitCancelFullScreen) {
-    document.webkitCancelFullScreen();
-  }
+	if(document.cancelFullScreen) {
+		document.cancelFullScreen();
+	} else if(document.mozCancelFullScreen) {
+		document.mozCancelFullScreen();
+	} else if(document.webkitCancelFullScreen) {
+		document.webkitCancelFullScreen();
+	}
 }
 
 function visualInit()
