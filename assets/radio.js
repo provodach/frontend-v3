@@ -112,7 +112,7 @@ function radioPlay(channel)
 
 		radioPlayer.onstalled = function()
 		{
-			setTempTitle('Low speed, awaiting for more buffer...');
+			setTempTitle('Low speed, waiting for more buffer...');
 		}
 
 		radioPlayer.onloadstart = function()
