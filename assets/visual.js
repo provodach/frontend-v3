@@ -73,7 +73,7 @@ function canvasInit() {
 	canvasCtx = canvas.getContext('2d');
 
 	canvasCtx.strokeStyle = (fullscreenRunning) ? 'rgb(171, 17, 193)' : 'rgba(81, 6, 92, 0.95)';
-	canvasCtx.lineWidth = 2;
+	canvasCtx.lineWidth = 3;
 
 	if (fullscreenRunning)
 		$('#fullscreen-visuals').show();
