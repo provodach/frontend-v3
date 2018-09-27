@@ -266,12 +266,14 @@ function processResult(csRes)
 	catch (e)
 	{
 		$("#track-name").text('- отказ сервера -');
+		$("#track-name").attr("href", "#");
 		return;
 	}
 
     if (a == null || typeof a == 'undefined')
     {
         $("#track-name").text('- нет данных -');
+        $("#track-name").attr("href", "#");
         return;
     }
 
@@ -309,12 +311,14 @@ function setTrackInfo (track)
 	}
 
 	$("#track-name").text(track);
+	$("#track-name").attr("href", "https://music.youtube.com/search?q=" + encodeURIComponent(track));
 }
 
 function setTempTitle(title)
 {
 	tempShowing = true;
 	var track = $('#track-name');
+	$("#track-name").attr("href", "#");
 	
 	track.html(title);
 	clearTimeout(trackTimer);

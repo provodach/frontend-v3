@@ -96,6 +96,10 @@ h3 {
 	margin-top: 20px;
 }
 
+#track-name {
+	text-decoration: none;
+	display: block;
+}
 
 .volume-dot {
 	display: inline;
