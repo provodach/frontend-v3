@@ -241,7 +241,7 @@ function requestTrackInfo()
 
     $.ajax(
     {
-        url: 'https://bits.waveradio.org/api/track/provodach',
+        url: '//core.waveradio.org/public/current?station=provodach&brief=1',
         dataType: 'json',
         crossDomain: true
     }).done(
@@ -261,7 +261,7 @@ function processResult(csRes)
 	
 	try
 	{
-		var a = csRes["track"];
+		var a = csRes["payload"];
 	}
 	catch (e)
 	{
