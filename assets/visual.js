@@ -86,6 +86,8 @@ function visualStart() {
 	source = audioCtx.createMediaElementSource(radioPlayer);
     source.connect(analyser);
 	source.connect(audioCtx.destination);
+	
+	audioCtx.resume();
 
 	visualActive = true;
 	draw();
