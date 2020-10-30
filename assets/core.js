@@ -14,7 +14,9 @@ function coreInit()
 	if (getVal('visuals_active') == null)
 		setVal('visuals_active', 1);
 
-	settings.visualsActive = (+getVal('visuals_active') === 1) ? true : false;
+	// settings.visualsActive = (+getVal('visuals_active') === 1) ? true : false;
+	
+	settings.visualsActive = false; // conflicts with Halloween web
 
 	$('#volume-gauge-container').click(volumeBarPressed);
 
@@ -22,6 +24,8 @@ function coreInit()
 		$('#cbx-visuals').addClass('active');
 	
 	radioInit();
+	
+	web_init();
 }
 
 function toggleVisuals() {
